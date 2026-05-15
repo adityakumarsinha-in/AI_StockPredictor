@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://www.magnific.com/premium-vector/stock-market-icon-logo-element-illustration-stock-market-symbol-design-from-2-colored-collection-simple-stock-market-concept-can-be-used-web-mobile_19114950.htm" type="image/x-icon">
+    <title>Realtime Trading Dashboard</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamental Stock Radar</title>
+    <meta
+      name="description"
+      content="Rank strong NSE and BSE stocks by fundamentals, view conservative entry timing, and compare high-conviction names."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">NSE + BSE Fundamentals Desk</p>
+          <h1>Find fundamentally strong stocks with a premium research-first view.</h1>
+          <p class="hero-copy">
+            Rank the strongest NSE and BSE names by a transparent score out of 100, review the reason behind each score, and see a conservative entry-timing tag before you decide to dig deeper.
+          </p>
+          <div class="stats-row">
+            <div class="stat-chip">
+              <span>Top score</span>
+              <strong id="topScore">--</strong>
+            </div>
+            <div class="stat-chip">
+              <span>NSE / BSE only</span>
+              <strong id="resultCount">--</strong>
+            </div>
+            <div class="stat-chip">
+              <span>Best pickup style</span>
+              <strong id="bestTag">--</strong>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <p class="section-label">Today’s read</p>
+          <div class="metric-stack">
+            <div class="metric-row">
+              <span>High-conviction names</span>
+              <strong id="highConviction">--</strong>
+            </div>
+            <div class="metric-row">
+              <span>Live feed</span>
+              <strong id="liveFeedStatus">Alpha Vantage sync pending</strong>
+            </div>
+            <div class="metric-row">
+              <span>Average score</span>
+              <strong id="averageScore">--</strong>
+            </div>
+            <div class="metric-row">
+              <span>Best timing posture</span>
+              <strong id="bestTiming">--</strong>
+            </div>
+          </div>
+          <p class="disclaimer">
+            This app is a research dashboard, not financial advice. Always verify fundamentals, valuation, and risk before investing.
+          </p>
+        </aside>
+      </section>
+
+      <section class="filters card">
+        <label>
+          <span>Exchange</span>
+          <select id="exchangeFilter"></select>
+        </label>
+        <label>
+          <span>Sector</span>
+          <select id="sectorFilter"></select>
+        </label>
+        <label>
+          <span>Market cap</span>
+          <select id="marketCapFilter"></select>
+        </label>
+      </section>
+
+      <section class="content-grid">
+        <section class="card ranking-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-label">Fundamentally strong stock ranking</p>
+              <h2>Sorted in descending order by score out of 100.</h2>
+            </div>
+            <div class="badge" id="resultBadge">0 results</div>
+          </div>
+          <div id="rankingList" class="ranking-list"></div>
+        </section>
+
+        <aside class="side-column">
+          <section class="card selected-card">
+            <div class="panel-header compact">
+              <div>
+                <p class="section-label">Selected stock</p>
+                <h3 id="selectedName">--</h3>
+              </div>
+              <div id="selectedScoreBadge" class="score-badge">--</div>
+            </div>
+            <p id="selectedRationale" class="body-copy"></p>
+            <div class="info-grid">
+              <div class="info-tile"><span>Exchange</span><strong id="selectedExchange">--</strong></div>
+              <div class="info-tile"><span>Sector</span><strong id="selectedSector">--</strong></div>
+              <div class="info-tile"><span>Price</span><strong id="selectedPrice">--</strong></div>
+              <div class="info-tile"><span>P/E</span><strong id="selectedPe">--</strong></div>
+              <div class="info-tile"><span>5Y return</span><strong id="selectedFiveYearReturn">--</strong></div>
+              <div class="info-tile"><span>Live source</span><strong id="selectedLiveSource">--</strong></div>
+            </div>
+            <div class="score-bars" id="selectedBars"></div>
+            <div class="pills" id="selectedHighlights"></div>
+            <button id="compareSelected" class="primary-btn" type="button">Add to compare</button>
+          </section>
+
+          <section class="card compare-card">
+            <div class="panel-header compact">
+              <div>
+                <p class="section-label">Compare view</p>
+                <h3>Watch side by side</h3>
+              </div>
+              <span class="helper">Max 3 stocks</span>
+            </div>
+            <div id="compareList" class="compare-list"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="card compare-summary">
+        <div class="panel-header compact">
+          <div>
+            <h3>Compare summary</h3>
+            <p class="body-copy muted">A quick view of the numbers behind the ranking.</p>
+          </div>
+          <p class="helper">Use the compare toggle to keep this panel focused.</p>
+        </div>
+        <div id="compareSummary" class="summary-grid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

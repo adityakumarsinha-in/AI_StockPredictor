@@ -1,0 +1,36 @@
+{
+  "name": "realtime-trading-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:client": "vite",
+    "dev:server": "node server/index.js",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "build": "vite build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "lightweight-charts": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.5.5",
+    "vite": "^5.0.0"
+  }
+}
+{
+  "name": "project-infinite-stock-ranker",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "echo Open index.html in a browser",
+    "build": "echo Static site; no build step required"
+  }
+}

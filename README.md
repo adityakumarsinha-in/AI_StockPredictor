@@ -1,142 +1,60 @@
-# 📈 AI Powered Fundamental Stock Analysis Platform
+# Realtime Trading Dashboard
 
-An intelligent stock analysis platform designed to identify fundamentally strong companies listed on **NSE** and **BSE** using advanced financial analysis, intrinsic value calculation, and AI-generated investment insights.
+IMPORTANT DISCLAIMER: The market data surfaced by this project may be delayed, incomplete, or incorrect. Do NOT rely on it for trading or investment decisions. Use this project for research, testing, or demonstration only.
 
-The platform simplifies complex stock market research by converting financial data into easy-to-understand analysis for retail investors, long-term investors, and stock market learners.
+This project is a minimal realtime trading dashboard scaffold (client + server) using:
 
----
+- React + Vite + Tailwind CSS
+- Express + WebSocket relay server
+- Finnhub WebSocket as market data source
+- TradingView Lightweight Charts
 
-# 🚀 Features
+Quick start:
 
-## 📊 Fundamental Analysis
+1. Install dependencies
 
-Analyze companies using key financial indicators:
+```bash
+npm install
+```
 
-* Revenue Growth
-* Profit Growth
-* ROE & ROCE
-* Debt-to-Equity Ratio
-* Free Cash Flow
-* Operating Margin
-* Earnings Consistency
-* Promoter Holding
-* PE, PB & PEG Ratios
+2. Start dev servers (two terminals) or run concurrently:
 
----
+```bash
+npm run dev:server
+npm run dev:client
+```
 
-## 💡 Intrinsic Value Calculation
+Or in one terminal (requires `concurrently`):
 
-Estimate stock fair value using:
+```bash
+npm run dev
+```
 
-* Discounted Cash Flow (DCF)
-* Margin of Safety
-* Earnings Growth Analysis
-* Relative Valuation Models
+3. Open the client at `http://localhost:5173` and the server runs on `:4000`.
 
-The platform identifies whether a stock is:
+Notes:
+- The server connects to Finnhub WebSocket and relays trade messages to connected browser clients. The Finnhub token can be set via `FINNHUB_TOKEN` environment variable.
+- This is a scaffold — extend charts, search, watchlist persistence, and UI polish as needed.
+# Fundamental Stock Radar
 
-* ✅ Undervalued
-* ⚖️ Fairly Valued
-* ❌ Overvalued
+A premium, zero-dependency NSE/BSE stock-ranking web app focused on transparent fundamentals scoring, conservative entry timing, and a polished research-style interface.
 
----
+## What it does
 
-## 🤖 AI Generated Stock Insights
+- Ranks strong NSE and BSE stocks in descending order by score out of 100
+- Shows the reason behind each score
+- Adds a simple entry timing tag for every stock
+- Supports exchange, sector, and market-cap filters
+- Includes a small compare view and a focused detail panel
+- Pulls live Alpha Vantage price data and 5-year return for the selected and compared stocks
 
-Get simple and human-readable investment insights such as:
+## Run locally
 
-> “The company shows strong financial growth, healthy cash flow, and low debt levels. Current valuation appears attractive for long-term investment.”
+Open `index.html` in your browser.
 
----
+## Notes
 
-# 📈 Advanced Modules
-
-* Financial Statement Analysis
-* Balance Sheet Analysis
-* Cash Flow Analysis
-* Sector Comparison
-* Growth Tracking
-* Risk Analysis
-* Valuation Dashboard
-* Stock Filtering System
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-* React.js
-* Next.js
-* Tailwind CSS
-
-## Backend
-
-* Node.js
-* FastAPI
-* REST APIs
-
-## Database
-
-* PostgreSQL
-* MongoDB
-
-## AI & Analytics
-
-* Financial Scoring Engine
-* AI Insight Generator
-* Intrinsic Value Engine
-
----
-
-# 🎯 Project Goals
-
-* Simplify Fundamental Analysis
-* Help Investors Find Quality Stocks
-* Reduce Emotional Trading Decisions
-* Make Investment Research More Accessible
-* Deliver AI-Powered Investment Insights
-
----
-
-# 👨‍💻 Target Users
-
-* Retail Investors
-* Long-Term Investors
-* Swing Traders
-* Stock Market Beginners
-* Financial Researchers
-
----
-
-# 🔥 Future Improvements
-
-* 📡 Real-Time Market Alerts
-* 📊 AI Portfolio Analyzer
-* 🌍 Global Stock Market Support
-* 📈 Technical + Fundamental Hybrid Analysis
-* 🔔 Personalized Recommendations
-
----
-
-# ⚠️ Disclaimer
-
-This project is built for educational and research purposes only and should not be considered financial advice.
-
-Always do your own research before investing.
-
----
-
-# ⭐ Support
-
-If you found this project useful:
-
-* Give it a ⭐ on GitHub
-* Fork the repository
-* Share feedback and suggestions
-
----
-
-# 📌 Keywords
-
-AI Stock Analysis, NSE Stock Analysis, BSE Stock Analysis, Fundamental Analysis Platform, Intrinsic Value Calculator, Indian Stock Market AI Tool, Stock Valuation System, AI Investment Insights, Financial Analysis Dashboard, Long Term Investing Platform
+- The current dataset is seeded for the first version of the app.
+- Alpha Vantage powers live tracking for price and 5-year return, using the provided API key.
+- The UI is structured so more live market data can be added later without redesigning the app.
+- This app is for research and education only, not investment advice.
