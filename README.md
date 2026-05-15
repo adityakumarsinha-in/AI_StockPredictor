@@ -1,4 +1,4 @@
-# Realtime Trading Dashboard AI Powered
+# Realtime Trading Dashboard - AI Powered
 
 IMPORTANT DISCLAIMER: The market data surfaced by this project may be delayed, incomplete, or incorrect. Do NOT rely on it for trading or investment decisions. Use this project for research, testing, or demonstration only.
 
