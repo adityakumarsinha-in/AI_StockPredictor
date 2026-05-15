@@ -1,5 +1,5 @@
 # Realtime Trading Dashboard - AI Powered
-Data maybe delayed
+Data maybe delayed, API USED
 IMPORTANT DISCLAIMER: The market data surfaced by this project may be delayed, incomplete, or incorrect. Do NOT rely on it for trading or investment decisions. Use this project for research, testing, or demonstration only.
 
 This project is a minimal realtime trading dashboard scaffold (client + server) using:
