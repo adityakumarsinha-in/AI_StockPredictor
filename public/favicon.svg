@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+	<defs>
+		<linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#1E1B4B" />
+			<stop offset="100%" stop-color="#0F172A" />
+		</linearGradient>
+		<linearGradient id="bullGrad" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#34D399" />
+			<stop offset="100%" stop-color="#10B981" />
+		</linearGradient>
+	</defs>
+	
+	<!-- Dark background -->
+	<rect width="64" height="64" rx="14" fill="url(#bgGrad)" />
+	
+	<!-- Large upward arrow (bull market symbol) -->
+	<!-- Vertical line (stem) -->
+	<rect x="28" y="16" width="8" height="28" rx="2" fill="url(#bullGrad)" />
+	
+	<!-- Left arrow wing -->
+	<polygon points="32,16 24,28 28,28" fill="url(#bullGrad)" />
+	
+	<!-- Right arrow wing -->
+	<polygon points="32,16 40,28 36,28" fill="url(#bullGrad)" />
+	
+	<!-- Trend line accent -->
+	<polyline points="16,44 24,38 32,34 40,28 48,20" stroke="url(#bullGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+	
+	<!-- Accent glow circle -->
+	<circle cx="40" cy="28" r="14" fill="none" stroke="url(#bullGrad)" stroke-width="1" opacity="0.3" />
+	
+	<!-- Dollar sign indicator -->
+	<text x="48" y="50" font-size="10" font-weight="bold" fill="url(#bullGrad)" opacity="0.9">$</text>
+</svg>
